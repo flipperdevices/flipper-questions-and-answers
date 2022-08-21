@@ -1,27 +1,29 @@
 # Flipper Zero developer Q&A
 ### August 19th 2022
 Audio:  [https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a](https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a).
-Recorded and transcripted by [`djsime1`](https://dj.je).  
+Recorded and transcripted by [`djsime1`](https://dj.je).
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
 ### Week in review:
 > - Very successful week
-> - Deployed region provisioning (More grannular than old 3 reigons)
+> - Deployed region provisioning (More granular than old 3 regions)
 > - RFID redesign finished (Now supports animal tags)
-> - SD Card app loading is still being worked on (Released in a week?)
+> - SD Card app loading is scheduled for next release
 
-### How does this new reigon provisioning affect old Flippers?
-> The old system will be overrided and will work like new devices.
+### How does this new region provisioning affect old Flippers?
+> The old system will be overridden and will work like new devices. Your flipper region will be updated according to your real location.
 
-### How do I change my device's reigon?
+### How do I change my device's region?
 > Currently it is done during while upgrading the Firmware from qFlipper or mobile app.
 > - When upgrading firmware from SD card, nothing is changed.
-> - Factory reset will wipe reigon provisioning
+> - Factory reset will wipe region provisioning
 
-### Do VPN's affect reigon provisioning?
-> Yes and no. Data is acquired from multiple sources (SIM card reigon, IP geolocation, etc.)
+### Do VPN's affect region provisioning?
+> Yes and no. Data is acquired from multiple sources (SIM card region, IP geolocation, Phone region, etc.)
 > - Most VPNs will not be counted as a valid source.
-> - Percise location is NOT used.
+> - Precise location is NOT used.
+> - Decision and region file generation done in companion app.
+> - No private data exposed to us.
 
 ### Is there a getting started guide to control GPIO?
 > Official documentation & SDK is coming after version 1.0.
@@ -35,11 +37,11 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - Think of it like a knife: You can use it properly to cut food, or illegally to stab someone.
 
 ### Will devices be shipped to South Australia?
-> Yes. Australian Customs are causing delays.
+> Yes. Australian Customs were causing some delays before(vet control), but should be fine now. You can order flipper in our shop.
 
 ### Is there a possibility of adding Rust as a supported language?
-> In the beginning it was considered, but in the end C was chosen for being more efficient.
-> - It should be possible to use in third party firmware/apps
+> There is no such plans. In the beginning it was considered, but in the end C was chosen for being more efficient.
+> - However it is possible to use in third party firmware/apps
 
 ### When will mfkey32v2 (Mifare Classic reader attack) be part of firmware/mobile app?
 > It's scheduled for the next sprint (2 weeks) and should arrive some time after that.
@@ -50,7 +52,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 
 ### What kind of usage data is pulled from the app, and how specific is it?
 > General anonymous metrics (what parts of the app are being used, what caused the app to crash) are sent.
-> - Again, reigon provisioning doesn't send location data back to Flipper servers.
+> - Again, region provisioning doesn't send location and private data back to Flipper servers.
 
 ### Looking into new LF RFID system GUI and part of app still in C++, but recently Infrared app was rewritten in plain C. So is there a reason why it should stay in C++ or rewrite is planned for next time, after this PR merged and protocols got all testing?
 > After the current pull request is merged, the app will be rewritten in C. (Update .66 or .67)
@@ -62,11 +64,11 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - Flipper One status:
 > - Baseboard is being designed
 > - It will have an SDR radio, probably LoRA too.
-> - Current challenge is managing power and dissapating heat.
+> - Current challenge is managing power and dissipating heat.
 > - More time will be spend after FZ 1.0 firmware is released.
 
 ### Can 8-byte NFC UID's be emulated?
-> No, it's impossible. It's unsupported by (current) Flipper's NFC chip. 
+> No, it's impossible. It's unsupported by (current) Flipper's NFC chip.
 
 ### What about NFC-V?
 > Should be possible to read and write, but not emulate.
@@ -74,8 +76,8 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 ### And Felica?
 > Support is being looked in to.
 
-### When it came to choosing SMT32 M4, what made it the chosen one? If the RP2040 was avilable in the begining, would you have chosen it?
-> STM32 was chosen due to "madness." It was a bargan between new chips (and their blackbox radio stack) and L4 series chips. Overall, there were not many other good options besides WB series.
+### When it came to choosing SMT32 M4, what made it the chosen one? If the RP2040 was available in the beginning, would you have chosen it?
+> STM32 was chosen due to "madness." It was a bargain between new chips (and their black-box radio stack) and L4 series chips. Overall, there were not many other good options besides WB series.
 > - In hindsight, WB wasn't a good choice due to locked down radio stack firmware.
 
 ### Will duckyscript be updated to 3.0?
@@ -87,7 +89,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > Yes. Currently, there's not a storefront (there will be) but you can open a support ticket to order specific replacement parts instead.
 > - Secure Enclave key is very difficult to replace
 > - If you fuck up the option bytes, documentation is coming on how to fix them.
-> - It's very hard to accidentally brick Flipper software wise, and theres slight voltage protection (up to 5V) on GPIO pins.
+> - It's very hard to accidentally brick Flipper software wise, and there is slight voltage protection (up to 5V) on GPIO pins.
 
 ### Will there be a specific IDE for writing plugins?
 > No. Everything needed is distributed alongside the firmware repository and can be compiled on multiple platforms.
@@ -109,7 +111,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 ### Are there plans for more “modules” like the wifi module to say add more memory or processing power and/or support for antennas. Related, any plans for a rudimentary SDR?
 > It's not possible to directly extend Flipper's CPU power or RAM, but co-processors (like the WiFi board) could be used to extend some functionality. As for an SDR, it's not possible to extend Flipper's internal antennas. You would need to add an antenna to your own module board.
 
-### Will you sell flipper "shells" (like the white and black) separately in diffrent colors?
+### Will you sell flipper "shells" (like the white and black) separately in different colors?
 > Besides a limited transparent shell, probably not, especially not black ones.
 
 ### Is there ever been questions of doing official support for companies who may be want to use flippers in their workplace such as a security company.
@@ -122,5 +124,5 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > Yes, however this time production will start at the same time as the kickstarter campaign.
 
 ### What is the schedule of these Q&As?
-> Every saturday, 1:00 AM and PM GMT.
-> - Session hosts alternate between Flipper developers and commuity members every week.
+> Every Saturday, 1:00 AM and PM GMT.
+> - Session hosts alternate between Flipper developers and community members every week.
