@@ -1,7 +1,8 @@
 # Flipper Zero developer Q&A
-### August 19th 2022
-Audio:  [https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a](https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a).
-Recorded and transcripted by [`djsime1`](https://dj.je).
+### August 19th 2022 (Side A)
+
+Audio: [https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a](https://archive.org/details/httpsarchive.orgdetailsflipperzero-qa-08192022-a)  
+Recorded and transcripted by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
 ### Week in review:

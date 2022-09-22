@@ -1,6 +1,7 @@
 # About
 
-This repository contains archive of flipper Question and Answer sessions.
+This repository contains archive of most Flipper Zero Question and Answer sessions.  
+*Note that archival is a community effort.*
 
 # When
 
