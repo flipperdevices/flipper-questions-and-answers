@@ -1,7 +1,7 @@
 # Flipper Zero developer Q&A
-### October 9th 2022 (Side A)
+### September 9th 2022 (Side A)
 
-Audio: []()  
+Audio: [https://archive.org/details/flipperzero-qa-09092022-a](https://archive.org/details/flipperzero-qa-09092022-a)  
 Recorded and transcripted by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
@@ -10,7 +10,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - RFID app has been converted to C.
 > - API's may change frequently until version 1.0.
 > - External libraries can be linked in apps.
-> - RFAL is being phased out in favor of FURI HAL
+> - RFAL is being phased out in favor of FURI HAL.
 
 ### How is Mifare Classic emulation being worked on?
 > Due to NXP's closed ecosystem, the NFC chip doesn't have native hardware support for Mifare Classic emulation. Instead, all the emulation has to take place via software in Flipper's firmware.

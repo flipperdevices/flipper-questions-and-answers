@@ -1,14 +1,14 @@
 # Flipper Zero developer Q&A
-### October 16th 2022 (Side A)
+### September 16th 2022 (Side A)
 
-Audio: []()  
+Audio: [https://archive.org/details/flipperzero-qa-09162022-a](https://archive.org/details/flipperzero-qa-09162022-a)  
 Recorded and transcripted by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
 ### Week in review:
 > - FAP (SD card) app loading has been merged into the firmware!
 > - Build tool updated to support compilation of apps.
-> - Automated API versioning system added to guarentee app compatibility.
+> - Automated API versioning system added to guarantee app compatibility.
 
 ### When will Canada get a restock?
 > October.
@@ -19,7 +19,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 ### When I plug in the WiFi dev board, the LED turns red. What’s going wrong?
 > This is intentional. The dev board ships with debugging firmware, and the red lights indicates it’s ready to start a debugging session. If you want to use the WiFi dev board for other purposes, check out community resources.
 
-### What was inspriation for Flipper Zero?
+### What was inspiration for Flipper Zero?
 > Why carry many devices in your backpack when you can just carry one?
 
 ### Whats the manufacturing cost of the device?
@@ -50,7 +50,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > If you can get it working, then yes. However, it won’t be officially supported.
 
 ### What will be included in future API’s?
-> All of FURI, some FreeRTOS primatives (such as streams), and basically all libraries/services.
+> All of FURI, some FreeRTOS primitives (such as streams), and basically all libraries/services.
 
 ### Will I be able to write NFC in the future?
 > Yes, most types of NFC tags (Except DESFire and EMV) will be able to be written by Flipper.
@@ -75,7 +75,8 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - Potentially add a warning before dict. attack starts to inform user why its taking so long?
 
 ### What is diff between R01 R02 and R03? Is it firmware or hardware or software?
-> They used to be relavant before the new provisioning system was added, but now it’s all obselete.
+> They used to be relevant before the new provisioning system was added, but now it’s all obsolete.
+> - After September, all new devices will ship with R04 (international) but provisioning system will take over.
 
 ### How do I read a chipped pet’s tag?
 > RFID App, extra actions, read ASK.

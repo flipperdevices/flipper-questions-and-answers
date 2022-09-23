@@ -1,7 +1,7 @@
 # Flipper Zero developer Q&A
 ### August 26th 2022 (Side B)
 
-Audio: []()  
+Audio: [https://archive.org/details/flipperzero-qa-08262022-b](https://archive.org/details/flipperzero-qa-08262022-b)  
 Recorded and transcripted by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
@@ -9,21 +9,21 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > In the future replacement parts will be sold via an online shop, but currently replacement parts can be purchased by opening a support ticket
 
 ### i think this was asked before, but as far as i remember there should be a Flipper Zero MK2 in future – how much of a hardware difference would be between MK1 and MK2?
-> It’s going to be the hardware equiilent of a bugfix. Functionality and firmware wise, nothing should change.
+> It’s going to be the hardware equivalent of a bugfix. Functionality and firmware wise, nothing should change.
 
 ### Is ELF loading the same as SD card apps?
-> Yes, ELF is the technial name.
+> Yes, ELF is the technical name.
 
 ### is there any talks of updating the iButton app to support other models of Dallas iButttons like the DS1994?
 > Currently nobody is working on the iButton application. If enough people request more protocols, then some work might be done. Alternatively, a pull request could be opened.
 
-### The newest firmware supports raw rfid read. Can you tell a bit on how to look into the generated files?
+### The newest firmware supports raw RFID read. Can you tell a bit on how to look into the generated files?
 > It’s a passive system that was intended to help the developers implimen support for reading more tag types.
 > - It’s a binary format with special packet integers, support to view such files are coming soon.
 
 ### I saw some playground with JavaScript. Will this be supported in the FW?
 > Yes, it will probably be the new BadUSB language.
-> - JS was chosen because a tiny interperter was avilable.
+> - JS was chosen because a tiny interperter was available.
 
 ### What can we expect from the “Speedup SD card & enlarge your RAM” change?
 > The Pull Request makes more efficient use of memory between the CPU’s Cores. As for the SD card, reads will be cached as blocks to make future retrival quicker. Currently no write cache.
@@ -34,17 +34,16 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 ### What exactly goes over the subghz external debug pin and why did you add it?
 > Sometimes when working on new tools, internal tools might not be enough. Thus, this was added to allow for external tools to analyze signals.
 
-### Could someone explain the pins on the flipper.  They are pogo pins yes?   Are they soldered? Or sit in place?
+### Could someone explain the pins on the flipper. Are they soldered or do they sit in place?
 > They’re soldered pogo pins, and can be replaced if needed.
 
 ### What’s the AMAP process that was recently added to GH Actions?
-> AMAP is a static analysis tool that tracks how much space is allocated to code. PVS Studio anlyzes potentially dangerous code.
-> - Currently all reported issues by both tools are being worked out. Once done, PR’s will have mandatory checks under these toos.
+> AMAP is a static analysis tool that tracks how much space is allocated to code. PVS Studio analyzes potentially dangerous code.
+> - Currently all reported issues by both tools are being worked out. Once done, PR’s will have mandatory checks under these tools.
 
-### Is there any project of integrating a magnetic strip reader on the next flipper ?
+### Is there any project of integrating a magnetic strip reader on the next Flipper?
 > During last year’s hackathon, someone actually made one. However, putting it into a portable external module was difficult.
 > - Magstrip emulation is unofficially possible with RFID coil.
-> - Python protobuf bindings are being worked on, this means you’ll be able to control Flipper via a Python library.
 
 ### Any plans on clear case?
 > It’s coming, but no specific date yet.
@@ -53,7 +52,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > Most likely yes, since it will have FFI bindings.
 
 ### with dynamic app loading, do you think it may be possible to reduce the size of the fw enough to have space for the the bluetooth+zigbee radio stack?
-> Unfortuneately no. Zigbee by itself is really big (300 kb) and full bluetooth stack takes 200 kb. Since the firmware already takes up 600 kb, it’s nearly impossible to include both.
+> Unfortunately no. Zigbee by itself is really big (300 kb) and full bluetooth stack takes 200 kb. Since the firmware already takes up 600 kb, it’s nearly impossible to include both.
 
 ### other question about dynamic loading: (except for background services) will it be possible in theory to have all apps offloaded to SD? or are some features/API calls requiring some app code to be in the fw?
 > Currently some apps are coupled to firmware libraries and can’t easily be put to SD card, while others can.
@@ -65,10 +64,10 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > Flipper’s CPU has this capability, however there’s no free GPIO pins to map for this purpose.
 
 ### Ever thought about a mini version in a smartwatch form factor?
-> Without huge comprimises, this isn’t possible.
+> Without huge compromises, this isn’t possible.
 
 ### What are the purpose of the new files on internal flash?
-> The internal flash stores mainly settings files, but also your Flipper's reigon-provisioned file (Necessary for Sub-GHz transmission)
+> The internal flash stores mainly settings files, but also your Flipper's region-provisioned file (Necessary for Sub-GHz transmission)
 
-### Now that reigon file is in internal flash, are you going to prevent external apps to prevent writing to it?
+### Now that region file is in internal flash, are you going to prevent external apps to prevent writing to it?
 > There’s not going to be any documentation on the file format.

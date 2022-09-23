@@ -1,14 +1,14 @@
 # Flipper Zero developer Q&A
 ### August 26th 2022 (Side A)
 
-Audio: []()  
+Audio: [https://archive.org/details/flipperzero-qa-08262022-a](https://archive.org/details/flipperzero-qa-08262022-a)  
 Recorded and transcripted by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
 ### Week in review:
-> - Released [VERSION] (Includes new RFID protocols)
-> - New provisioning system is being rolled out to factory
-> - ELF plugin loading is almost ready to release
+> - Released 0.65.2 firmware (Includes new RFID protocols).
+> - New provisioning system is being rolled out to factory.
+> - ELF plugin loading is almost ready to release.
 
 ### Where is the comany based out of?
 > Flipper Zero factory is located in Shenzen China.
@@ -22,7 +22,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - You can also write your own firmware for the WiFi board to do other stuff
 
 ### Does this mean factory firmware is going to be upgraded? Have you considered shipping a minimal firmware that prompts the user to update via qFlipper or the mobile app?
-> Yes, out-of-box firmware will be upgraded, such that Sub-GHz transmission won’t be usable until the reigon is provsioned. A minimal firmware isn’t required since you’re already prompted to update upon first start.
+> Yes, out-of-box firmware will be upgraded, such that Sub-GHz transmission won’t be usable until the region is provisioned. A minimal firmware isn’t required since you’re already prompted to update upon first start.
 
 ### What is the Flipper team’s near to mid-term roadmap for SubGhz and 125kHz modules?
 > Adding protocols to NFC, RFID, and Sub-GHz has been made more streamlined. In the near future, RFID’s C++ code will be rewritten in C.
@@ -37,7 +37,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > If you know the protocol of your garage, you can generate a new key on the Flipper and tell your garage to learn it.
 
 ### How common is it for Flipper to get damaged in shipping?
-> Only ~10 out of 60,000 shpments have been damaged beyond the point of use so far. If your order is damaged, open a support ticket for repalcement.
+> Only ~10 out of 60,000 shipments have been damaged beyond the point of use so far. If your order is damaged, open a support ticket for replacement.
 
 ### Any updates on ELF (SD-card apps) loading?
 > Yes, it will be rolled out in the next firmware release. After that, the API will be finalized and UI/UX work will be done.
@@ -46,5 +46,5 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > Hardware wise, no it’s not possible. However, software measures are being taken to reduce overall RAM usage.
 
 ### Can the consumer replace the battery should it start having charging issues in the future? Or is it sealed in there?
-> Yes, the device can be disassembeled and the battery can be replaced. [iFixit link]
+> Yes, the device can be disassembled and the battery can be replaced. https://www.ifixit.com/Teardown/Flipper+Zero+Teardown/151455
 > - Contact Flipper Support for exact replacement battery, however most of similar size and spec should work.
