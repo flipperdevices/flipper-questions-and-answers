@@ -2,12 +2,12 @@
 ### September 23rd 2022 (Side A)
 
 Audio: [https://archive.org/details/flipperzero-qa-09232022-a](https://archive.org/details/flipperzero-qa-09232022-a)  
-Recorded and transcripted by [`djsime1`](https://dj.je).  
+Recorded and transcribed by [`djsime1`](https://dj.je).  
 **NOTE:** The transcription of questions and answers may contain errors, take it all with a grain of salt.
 
 ### Week in review
 > - SD card app loading finally released!
-> - SDK currently suports C langauge, C++ is coming. Rust may or may not be supported in the future as well.
+> - SDK currently supports C language, C++ is coming. Rust may or may not be supported in the future as well.
 > - C++ has been completely removed from the main firmware.
 > - Work on a universal AC remote has begun.
 > - Certain NFC transit cards can have their balance read.
@@ -52,7 +52,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 ### Does the flipper have a optimal frame rate for animation?
 > Nothing specific, just keep in mind pixels can't switch on and off instantly.
 
-### Any updates on JS BadUSB interpeter?
+### Any updates on JS BadUSB interpreter?
 > Still in backlog.
 
 ### When will the next US shipment go out?
@@ -60,7 +60,7 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 
 ### Should precautions be taken with using Flipper in extreme heat?
 > Same general precautions as any other device with a battery, don't leave it in the sun.
-> - Battery circut has some protections in place.
+> - Battery circuit has over-current, under/over voltage protections in place.
 > - Also direct sunlight can damage the screen.
 > - Internal temperatures can be read via the CLI command `power info`
 
@@ -82,17 +82,17 @@ Recorded and transcripted by [`djsime1`](https://dj.je).
 > - SubGHz averages 30-50m, max observed is 100m.
 > - BLE is approx 50m.
 > - NFC has to be within a few inches/centimeters.
-> - RFID is similar to NFC, perpaps a bit further in a few cases.
+> - RFID is similar to NFC, perhaps a bit further in a few cases.
 
 ### Can a Bluetooth keyboard be paired for CLI use?
 > No, CLI takes place over USB serial protocol.
 
 ### Will there be more Tamogatchi features in the future?
 > Currently, the more use use Flipper the more you level up. Each of the 3 levels unlocks new desktop animations.
-> - Flipper isn't legally allowed to names like Tamogatchi.
+> - Flipper isn't legally allowed to use names like Tamogatchi.
 
 ### Can the CLI be used over GPIO instead of USB?
 > No, USB is the only way to access the CLI currently.
 
-### Why is Amiibo misspelled in the NFC app?
-> It isn't. The 'typo' is very intentional, because Ninendo are legal assholes.
+### Why is Ameebo misspelled in the NFC app?
+> It isn't. The 'typo' is very intentional, because Ninendo are in deep love with copyright.
